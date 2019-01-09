@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+
+    <title>crud</title>
+
+    <script>
+        $(document).ready(function(){
+
+});
+    </script>
+
+     <style>
+.logout
+{
+   position:fixed;
+   right:10px;
+   top:5px;
+}
+</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">CRUD</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/add">Add Employees</a></li>
+      <li><a href="/list">All Employees</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="/logout"><span class="glyphicon glyphicon-user"></span>logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+	<div class="row">
+
+
+        <div class="col-md-12">
+        <h4>employee_data</h4>
+        <div class="table-responsive">
+
+
+              <table id="mytable" class="table table-bordred table-striped">
+
+
+                   <thead>
+
+
+                   <th>First Name</th>
+                    <th>Last Name</th>
+                     <th>Address</th>
+                     <th>Email</th>
+                     <th>Contact</th>
+                      <th>Edit</th>
+
+                       <th>Delete</th>
+                   </thead>
+
+    <tbody>
+    {%if employee%}
+    {%for user in employee%}
+    <tr>
+    <td>{{user[1]}}</td>
+    <td>{{user[2]}}</td>
+    <td>{{user[3]}}</td>
+    <td>{{user[4]}}</td>
+        <td>{{user[5]}}</td>
+        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><a href="/edit/{{user[0]}}"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></a></p></td>
+    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><a href="/delete/{{user[0]}}"><button id="" class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></a></p></td>
+    </tr>
+    {%endfor%}
+    {%endif%}
+
+    </tbody>
+
+</table>
+
+
+        </div>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>

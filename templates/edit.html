@@ -1,0 +1,76 @@
+<html>
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <title>CRUD</title>
+
+<style>
+.logout
+{
+   position:fixed;
+   right:10px;
+   top:5px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Default form subscription -->
+<!-- Default form subscription -->
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">CRUD</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/add">Add Employees</a></li>
+      <li><a href="/list">All Employees</a></li>
+     </ul>
+
+
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="/logout"><span class="glyphicon glyphicon-user"></span>logout</a></li>
+
+    </ul>
+
+
+  </div>
+</nav>
+<form action="/edit/{{user[0]}}" method="POST">
+
+  <div class="form-group">
+    <h4>Edit Employee</h4>
+  </div>
+  <div class="form-group">
+    <label for="firstname">First Name</label>
+    <input type="text" class="form-control" name="firstname" value="{{user[1]}}" required>
+  </div>
+  <div class="form-group">
+    <label for="secondname">Second Name</label>
+    <input type="text" class="form-control" name="lastname" value="{{user[2]}}" required>
+  </div>
+    <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" class="form-control" name="address" value="{{user[3]}}" required>
+  </div>
+    <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" name="email" value="{{user[4]}}" required>
+  </div>
+    <div class="form-group">
+    <label for="contact">Contact</label>
+    <input type="text" class="form-control" name="contact" value="{{user[5]}}" required>
+  </div>
+  <button type="submit" id="addbutton" class="btn btn-default">Submit</button>
+</form>
+
+</body>
+</html>

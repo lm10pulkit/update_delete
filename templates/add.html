@@ -1,0 +1,72 @@
+<html>
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <title>CRUD</title>
+
+  <style>
+
+</style>
+
+
+
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">CRUD</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/add">Add Employees</a></li>
+      <li><a href="/list">All Employees</a></li>
+
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="/logout"><span class="glyphicon glyphicon-user"></span>logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Default form subscription -->
+<!-- Default form subscription -->
+<form action="/add" method="POST">
+
+  <div class="form-group">
+    <h4>Add Employee</h4>
+  </div>
+  <div class="form-group">
+    <label for="firstname">First Name</label>
+    <input type="text" class="form-control" name="firstname" required>
+  </div>
+  <div class="form-group">
+    <label for="secondname">Second Name</label>
+    <input type="text" class="form-control" name="lastname" required>
+  </div>
+    <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" class="form-control" name="address" required>
+  </div>
+    <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" name="email" required>
+  </div>
+    <div class="form-group">
+    <label for="contact">Contact</label>
+    <input type="text" class="form-control" name="contact" required>
+  </div>
+  <button type="submit" id="addbutton" class="btn btn-default">Submit</button>
+</form>
+
+</body>
+</html>
